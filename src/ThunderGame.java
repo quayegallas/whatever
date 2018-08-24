@@ -20,7 +20,11 @@ public class ThunderGame implements MouseListener, MouseMotionListener {
     }
 
     public static void regame() {
-        main(new String[0]);
+        try {
+            thunderGame.finalize();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
     }
 
     ThunderGame() {
